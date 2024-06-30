@@ -13,7 +13,9 @@ mod tests {
 
     #[test]
     fn string_size() {
-        assert_eq!(size_of::<String>(), todo!());
+        // 一个字符串有一个8字节的指针，一个8字节的长度，一个8字节的容量组成
+        // 在64位系统中是24字节。在32位系统中是12字节，每个组成部分是4字节
+        assert_eq!(size_of::<String>(), 24);
     }
 
     #[test]
@@ -23,6 +25,6 @@ mod tests {
         // but, in general, the memory layout of structs is a more complex topic.
         // If you're curious, check out the "Data layout" section of the Rustonomicon
         // https://doc.rust-lang.org/nomicon/data.html for more information.
-        assert_eq!(size_of::<Ticket>(), todo!());
+        assert_eq!(size_of::<Ticket>(), 72);
     }
 }

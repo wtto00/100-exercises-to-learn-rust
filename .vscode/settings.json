@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:100-exercises-to-learn-rust}/exercises/progress.db",
+            "name": "100-exercises-to-learn-rust"
+        }
+    ]
+}
